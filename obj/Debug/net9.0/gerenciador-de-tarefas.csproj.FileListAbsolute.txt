@@ -1,0 +1,14 @@
+C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\bin\Debug\net9.0\gerenciador-de-tarefas.exe
+C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\bin\Debug\net9.0\gerenciador-de-tarefas.deps.json
+C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\bin\Debug\net9.0\gerenciador-de-tarefas.runtimeconfig.json
+C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\bin\Debug\net9.0\gerenciador-de-tarefas.dll
+C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\bin\Debug\net9.0\gerenciador-de-tarefas.pdb
+C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\obj\Debug\net9.0\gerenciador-de-tarefas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\obj\Debug\net9.0\gerenciador-de-tarefas.AssemblyInfoInputs.cache
+C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\obj\Debug\net9.0\gerenciador-de-tarefas.AssemblyInfo.cs
+C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\obj\Debug\net9.0\gerenciador-de-tarefas.csproj.CoreCompileInputs.cache
+C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\obj\Debug\net9.0\gerenciador-de-tarefas.dll
+C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\obj\Debug\net9.0\refint\gerenciador-de-tarefas.dll
+C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\obj\Debug\net9.0\gerenciador-de-tarefas.pdb
+C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\obj\Debug\net9.0\gerenciador-de-tarefas.genruntimeconfig.cache
+C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\obj\Debug\net9.0\ref\gerenciador-de-tarefas.dll
