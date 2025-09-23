@@ -44,9 +44,9 @@ namespace gerenciador_de_tarefas.Models
             Descricao = novaDescricao;
         }
 
-        public override string ToString()
+        public virtual void Exibir()
         {
-            return $"Título: {Titulo} | Descrição: {Descricao} | Prazo: {Prazo} | Concluído: {Concluido}";
+            Console.WriteLine($"Título: {Titulo} | Descrição: {Descricao} | Prazo: {Prazo} | Concluído: {Concluido}");
         }
 
     }

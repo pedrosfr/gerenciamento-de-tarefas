@@ -12,3 +12,4 @@ C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\obj\De
 C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\obj\Debug\net9.0\gerenciador-de-tarefas.pdb
 C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\obj\Debug\net9.0\gerenciador-de-tarefas.genruntimeconfig.cache
 C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\obj\Debug\net9.0\ref\gerenciador-de-tarefas.dll
+C:\Users\pedro\OneDrive\Documentos - Copia\Projeto\gerenciador-de-tarefas\obj\Debug\net9.0\gerenciador-de-tarefas.sourcelink.json

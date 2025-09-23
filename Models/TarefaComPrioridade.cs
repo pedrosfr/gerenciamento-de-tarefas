@@ -20,7 +20,10 @@ namespace gerenciador_de_tarefas.Models
             NivelDePrioridade = nivelDePrioridade;
 
         }
-        
+        public override void Exibir()
+        {
+            System.Console.WriteLine($"Título: {Titulo} | Descrição: {Descricao} | Prazo: {Prazo} | Concluído: {Concluido} | Prioridade: {NivelDePrioridade}");
+        }
         
         
     }

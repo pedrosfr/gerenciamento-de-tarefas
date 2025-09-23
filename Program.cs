@@ -28,13 +28,16 @@ do
         Console.Write("Digite a descrição: ");
         string descricao = Console.ReadLine();
 
-        Console.WriteLine("Digite a Data da Criação (dd/mm/aaaa): ");
+        Console.Write("Digite a Data da Criação (dd/mm/aaaa): ");
         DateTime datacriacao = DateTime.Parse(Console.ReadLine());
 
-        Console.WriteLine("Digite o prazo (dd/mm/aaaa): ");
+        Console.Write("Digite o prazo (dd/mm/aaaa): ");
         DateTime prazo = DateTime.Parse(Console.ReadLine());
 
-        Tarefa t = new Tarefa(id, titulo, descricao, datacriacao, prazo, concluido: false);
+        Console.Write("Nível de Prioridade da Tarefa: ");
+        int nivelDePrioridade = int.Parse(Console.ReadLine());
+
+        Tarefa t = new TarefaComPrioridade(id, titulo, descricao, datacriacao, prazo, concluido: false, nivelDePrioridade);
         lista.Adicionar(t);
 
     }

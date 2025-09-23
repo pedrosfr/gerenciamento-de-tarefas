@@ -27,7 +27,7 @@ namespace gerenciador_de_tarefas.Models
         {
             foreach (Tarefa t in Tarefa)
             {
-                System.Console.WriteLine(t);
+                t.Exibir();
             }
         }
         public void Buscar(string titulo)
@@ -38,7 +38,7 @@ namespace gerenciador_de_tarefas.Models
             {
                 if (t.Titulo != null && t.Titulo.Equals(titulo, StringComparison.OrdinalIgnoreCase))
                 {
-                    Console.WriteLine(t);
+                    t.Exibir();
                     encontrado = true;
                 }
             }
