@@ -19,26 +19,37 @@ do
 
     if (opcao == 1)
     {
-        Console.Write("Digite o id da Tarefa: ");
-        int id = int.Parse(Console.ReadLine());
+        try
+        {
+            Console.Write("Digite o id da Tarefa: ");
+            int id = int.Parse(Console.ReadLine());
 
-        Console.Write("Digite o título: ");
-        string titulo = Console.ReadLine();
+            Console.Write("Digite o título: ");
+            string titulo = Console.ReadLine();
 
-        Console.Write("Digite a descrição: ");
-        string descricao = Console.ReadLine();
+            Console.Write("Digite a descrição: ");
+            string descricao = Console.ReadLine();
 
-        Console.Write("Digite a Data da Criação (dd/mm/aaaa): ");
-        DateTime datacriacao = DateTime.Parse(Console.ReadLine());
+            Console.Write("Digite a Data da Criação (dd/mm/aaaa): ");
+            DateTime datacriacao = DateTime.Parse(Console.ReadLine());
 
-        Console.Write("Digite o prazo (dd/mm/aaaa): ");
-        DateTime prazo = DateTime.Parse(Console.ReadLine());
+            Console.Write("Digite o prazo (dd/mm/aaaa): ");
+            DateTime prazo = DateTime.Parse(Console.ReadLine());
 
-        Console.Write("Nível de Prioridade da Tarefa: ");
-        int nivelDePrioridade = int.Parse(Console.ReadLine());
+            Console.Write("Nível de Prioridade da Tarefa: ");
+            int nivelDePrioridade = int.Parse(Console.ReadLine());
 
-        Tarefa t = new TarefaComPrioridade(id, titulo, descricao, datacriacao, prazo, concluido: false, nivelDePrioridade);
-        lista.Adicionar(t);
+            Tarefa t = new TarefaComPrioridade(id, titulo, descricao, datacriacao, prazo, concluido: false, nivelDePrioridade);
+            lista.Adicionar(t);
+        }
+        catch (FormatException)
+        {
+            System.Console.WriteLine("Entrada Inválida! Verifique os dados digitados por favor!");
+        }
+        catch (Exception e) {
+            System.Console.WriteLine("Ocorreu um erro inesperado! " + e.Message);
+        }
+
 
     }
     else if (opcao == 2)
@@ -48,9 +59,17 @@ do
     }
     else if (opcao == 3)
     {
-        System.Console.Write("Digite o nome do título que deseja buscar: ");
-        string titulo = Console.ReadLine();
-        lista.Buscar(titulo);
+        try
+        {
+            System.Console.Write("Digite o nome do título que deseja buscar: ");
+            string titulo = Console.ReadLine();
+            lista.Buscar(titulo);
+        }
+        catch (Exception ex)
+        {
+            System.Console.WriteLine("Erro na busca! "+ex.Message);
+            
+        }
     }
     else if (opcao == 4)
     {
@@ -121,24 +140,31 @@ do
     }
     else if (opcao == 7)
     {
-        System.Console.Write("Digite o ID para excluir a Tarefa: ");
-        int id = int.Parse(Console.ReadLine());
-
-        bool encontrada = false;
-
-        for (int i = 0; i < lista.Tarefa.Count; i++)
+        try
         {
-            if (lista.Tarefa[i].Id == id)
+            System.Console.Write("Digite o ID para excluir a Tarefa: ");
+            int id = int.Parse(Console.ReadLine());
+
+            bool encontrada = false;
+
+            for (int i = 0; i < lista.Tarefa.Count; i++)
             {
-                lista.Remover(lista.Tarefa[i]);
-                encontrada = true;
-                Console.WriteLine("Tarefa excluída com sucesso!");
-                break;
+                if (lista.Tarefa[i].Id == id)
+                {
+                    lista.Remover(lista.Tarefa[i]);
+                    encontrada = true;
+                    Console.WriteLine("Tarefa excluída com sucesso!");
+                    break;
+                }
+                else
+                {
+                    System.Console.WriteLine("ID Não encontrado!");
+                }
             }
-            else
-            {
-                System.Console.WriteLine("ID Não encontrado!");
-            }
+        }
+        catch (FormatException)
+        {
+            System.Console.WriteLine("Tarefa não existe!");
         }
 
     }
