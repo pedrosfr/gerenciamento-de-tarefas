@@ -25,9 +25,22 @@ namespace gerenciador_de_tarefas.Models
         }
         public void ListarTodas()
         {
+            if (Tarefa == null || Tarefa.Count == 0)
+            {
+                System.Console.WriteLine("Nenhuma Tarefa Cadastrada!");
+                return;
+            }
             foreach (Tarefa t in Tarefa)
             {
-                t.Exibir();
+                if (Tarefa != null)
+                {
+                    t.Exibir();
+                }
+
+                else
+                {
+                    Console.WriteLine("Não Existe nenhuma Tarefa");
+                }
             }
         }
         public void Buscar(string titulo)
@@ -49,11 +62,11 @@ namespace gerenciador_de_tarefas.Models
             }
 
         }
-        
-        
-        
-    
-        
+
+
+
+
+
 
     }
 }
