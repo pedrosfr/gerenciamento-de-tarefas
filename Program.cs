@@ -4,7 +4,8 @@ ListaDeTarefas lista = new ListaDeTarefas();
 int opcao;
 do
 {
-    Console.WriteLine("===== Gerenciamento de Tarefas =====");
+    Console.WriteLine();
+    Console.WriteLine("=== Gerenciamento de Tarefas ===");
     Console.WriteLine("1 - Adicionar Tarefas");
     Console.WriteLine("2 - Listar Tarefas");
     Console.WriteLine("3 - Buscar Tarefa por título");
@@ -44,17 +45,27 @@ do
         }
         catch (FormatException)
         {
-            System.Console.WriteLine("Entrada Inválida! Verifique os dados digitados por favor!");
+            Console.WriteLine("Entrada inválida! Verifique os dados digitados.");
         }
-        catch (Exception e) {
-            System.Console.WriteLine("Ocorreu um erro inesperado! " + e.Message);
+        catch (Exception ex)
+        {
+            System.Console.WriteLine("Ocorreu um erro inesperado! "+ex.Message);
+            
         }
-
 
     }
     else if (opcao == 2)
     {
-        lista.ListarTodas();
+        try
+        {
+
+
+            lista.ListarTodas();
+        }
+        catch (Exception ex)
+        {
+            System.Console.WriteLine("Inválido!");
+        }
 
     }
     else if (opcao == 3)
@@ -67,8 +78,8 @@ do
         }
         catch (Exception ex)
         {
-            System.Console.WriteLine("Erro na busca! "+ex.Message);
-            
+            System.Console.WriteLine("Erro na busca! " + ex.Message);
+
         }
     }
     else if (opcao == 4)
