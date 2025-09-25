@@ -32,7 +32,7 @@ namespace gerenciador_de_tarefas.Models
             }
             foreach (Tarefa t in Tarefa)
             {
-                if (Tarefa != null)
+                if (t != null)
                 {
                     t.Exibir();
                 }

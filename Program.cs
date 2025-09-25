@@ -25,7 +25,12 @@ try
             try
             {
                 Console.Write("Digite o id da Tarefa: ");
-                int id = int.Parse(Console.ReadLine());
+                if (!int.TryParse(Console.ReadLine(), out int id))
+                {
+                    System.Console.WriteLine("ID Inválido");
+                    continue;
+                }
+
 
                 Console.Write("Digite o título: ");
                 string titulo = Console.ReadLine();
@@ -34,11 +39,17 @@ try
                 string descricao = Console.ReadLine();
 
                 Console.Write("Digite a Data da Criação (dd/mm/aaaa): ");
-                DateTime datacriacao = DateTime.Parse(Console.ReadLine());
-
+                if (DateTime.TryParse(Console.ReadLine(), out DateTime datacriacao))
+                {
+                    System.Console.WriteLine("Data Inválida!");
+                    continue;
+                }
                 Console.Write("Digite o prazo (dd/mm/aaaa): ");
-                DateTime prazo = DateTime.Parse(Console.ReadLine());
-
+                if (DateTime.TryParse(Console.ReadLine(), out DateTime prazo))
+                {
+                    System.Console.WriteLine("Data Inválida!");
+                    continue;
+                }
                 Console.Write("Nível de Prioridade da Tarefa: ");
                 int nivelDePrioridade = int.Parse(Console.ReadLine());
 
@@ -102,6 +113,7 @@ try
 
             Console.Write("Digite o ID para digitar um novo título: ");
             int id = int.Parse(Console.ReadLine());
+            
             bool encontrada = false;
             foreach (Tarefa tarefa in lista.Tarefa)
             {
@@ -115,12 +127,14 @@ try
 
 
                 }
-                else
+            }
+                if (!encontrada)
                 {
                     Console.WriteLine("ID Não encontrado!");
+
                 }
 
-            }
+            
         }
         else if (opcao == 6)
         {
@@ -137,12 +151,13 @@ try
                     encontrada = true;
                     Console.Write("Descrição alterada com sucesso!");
                 }
-                else
-                {
-                    System.Console.WriteLine("ID Não encontrado!");
-                }
             }
-        }
+            if (!encontrada)
+            {
+                System.Console.WriteLine("ID Não encontrado!");
+            }
+            }
+        
         else if (opcao == 7)
         {
             try
@@ -161,11 +176,14 @@ try
                         Console.WriteLine("Tarefa excluída com sucesso!");
                         break;
                     }
-                    else
-                    {
-                        System.Console.WriteLine("ID Não encontrado!");
-                    }
                 }
+                if (!encontrada)
+                {
+
+                    System.Console.WriteLine("ID Não encontrado!");
+
+                }   
+                
             }
             catch (FormatException)
             {
